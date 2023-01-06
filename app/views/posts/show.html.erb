@@ -1,0 +1,13 @@
+<div>
+    <strong>TITLE:</strong>
+    <%= @post.title %>
+</div>
+
+<p>
+    <strong>TEXT:</strong>
+    <%= @post.text %>
+
+</p>
+
+<%= link_to "All Posts",posts_path %>
+<%=link_to "Edit",edit_post_path(@post) %>
