@@ -1,13 +1,30 @@
+
 <div>
     <strong>TITLE:</strong>
     <%= @post.title %>
 </div>
 
-<p>
+<div>
     <strong>TEXT:</strong>
     <%= @post.text %>
 
-</p>
+</div><br>
+
+<%if @post.comments.any?%>
+     <h2>Comments </h2>
+<%end%>
+
+
+<%=render @post.comments%>
+<br>
+
+<h2>Add Comment</h2>
+<div>
+    <%=render "comments/form"%>
+</div>
+
+
+
 
 <%= link_to "All Posts",posts_path %>
 <%=link_to "Edit",edit_post_path(@post) %>
